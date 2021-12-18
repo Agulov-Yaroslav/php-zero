@@ -12,7 +12,7 @@
 <?php 
 require('connect.php');
 
-if(isset($_POST['username']) && isset($_POST['email']) && isset($_POST['password'])){
+if(isset($_POST['username']) and isset($_POST['email']) and isset($_POST['password'])){
     $username = $_POST['username'];
     $email = $_POST['email'];
     $password = $_POST['password'];
@@ -34,10 +34,11 @@ if(isset($_POST['username']) && isset($_POST['email']) && isset($_POST['password
             <h2>Registration</h2>
             <?php if(isset($smsg)){ ?><div class="alert alert-success" role="alert"> <?php echo $smsg; ?></div><?php }?>
             <?php if(isset($fsmsg)){ ?><div class="alert alert-danger" role="alert"> <?php echo $fsmsg; ?></div><?php }?>
-            <input type="text" name="username"  class="form-conrol" placeholder="Username" required><br>
-            <input type="email" name="email"  class="form-conrol" placeholder="Email" required><br>
-            <input type="password" name="password"  class="form-conrol" placeholder="Password" required><br>
-            <button class="btn btn-lg btn-primary col-6" type="submit">Register</button>
+            <input type="text" name="username"  class="form-conrol" placeholder="Username" required></br>
+            <input type="email" name="email"  class="form-conrol" placeholder="Email" required></br>
+            <input type="password" name="password"  class="form-conrol" placeholder="Password" required></br>
+            <button class="btn btn-lg btn-primary col-6 mb-1" type="submit">Register</button></br>
+            <a href="login.php" class="btn btn-ld btn-primary btn-block col-6">Login</a>
         </form>
     </div>
 </body>
